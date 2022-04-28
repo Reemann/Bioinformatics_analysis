@@ -22,3 +22,11 @@ cd $workdir
 # common peaks
 path_to_common_peak_BED=path/to/common_peaks.bed
 common_peak_FRiP.sh $name PE CR $path_to_common_peak_BED
+
+
+# ----- BLAST low mapping samples -----
+mapping_log_dir=path/to/MappingLogs
+fastq_dir=path/to/fastqFiles
+blast_db=~/source/blast_db
+# the order of mapping.logs must be consistent with the alphanumeric `ls` order of fastq files
+blast_low_mapped_samples.py -d $fastq_dir -b $blast_db -n [$select_reads_number] -@ [$blast_threads] -m ${mapping_log_dir}/Mapping_${name1}.log,${mapping_log_dir}/Mapping_${name2}.log,${mapping_log_dir}/Mapping_${name3}.log
