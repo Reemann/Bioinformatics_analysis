@@ -6,6 +6,7 @@ download_raw_seq.py -p $PRJNAXXXXXX -f 'SRRxxxxxx1|SRRxxxxxx2|SRRxxxxxx3' -o 0_r
 cd ${workdir}/0_raw_data
 bash ${PRJNAXXXXXX}.sh
 
+
 # ----- run -----
 cd $workdir
 # normal
@@ -29,6 +30,7 @@ function rerun_segment_fault_samples{
     tail ../bin/log/${name}_rerun.log
 }
 rerun_segment_fault_samples $name "chrXX:XXXXXXX-XXXXXXX"
+
 
 # ----- extract mapping ratio -----
 
