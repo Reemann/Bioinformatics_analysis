@@ -6,6 +6,6 @@
 
 ##### ---------- downloading public data ---------- #####
 cd $workdir
-download_raw_seq.py -p $PRJNAXXXXXX -f 'SRRxxxxxx1|SRRxxxxxx2|SRRxxxxxx3' -o 0_raw_data
+download_raw_seq.py -p PRJNAXXXXXX -f 'SRRxxxxxx1|SRRxxxxxx2|SRRxxxxxx3' -o 0_raw_data
 cd ${workdir}/0_raw_data
-bash ${PRJNAXXXXXX}.sh
+bash PRJNAXXXXXX.sh
